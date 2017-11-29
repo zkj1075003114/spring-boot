@@ -1,0 +1,14 @@
+server:
+  port: 8082
+  address: 127.0.0.1
+    
+    
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mydb01.tomtop.com:3306/memberdb?useUnicode=true&characterEncoding=UTF-8 
+    username: web
+    password: webserver!123
+  
+ 
+ 
