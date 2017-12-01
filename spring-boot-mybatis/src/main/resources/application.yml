@@ -1,0 +1,27 @@
+server:
+  port: 8082
+  address: 127.0.0.1
+    
+spring:
+  jdbc:
+    #driver-class-name: com.mysql.jdbc.Driver
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/manage?useSSL=false&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 123456
+    # 使用druid数据源
+    pgmaxActive: 20
+    pginitialSize: 5
+    pgminIdle: 2
+    maxActive: 500
+    initialSize: 20
+    minIdle: 20
+    maxWait: 3000
+    timeBetweenEvictionRunsMillis: 60000
+    removeAbandoned: true
+    removeAbandonedTimeout: 120
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat
