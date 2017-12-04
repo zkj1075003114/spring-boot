@@ -12,7 +12,7 @@ public class SchedulingConfig {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Scheduled(cron = "0/20 * * * * ?") // 每20秒执行一次
+    @Scheduled(cron = "0/20 30 1 * * ?") // 每20秒执行一次
     public void scheduler() {
         logger.info(">>>>>>>>>>>>> 20 scheduled ... ");
     }

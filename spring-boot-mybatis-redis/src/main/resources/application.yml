@@ -25,3 +25,38 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     filters: stat
+    
+#redis单服务配置
+#  redis:
+#    host: localhost
+#    port: 6379
+#    password: 123456
+#    database: 1
+#    pool:
+#      max-active: 8
+#      max-wait: -1
+#      max-idle: 500
+#      min-idle: 0
+#      timeout: 0    
+      
+#redis集群配置   
+
+jedisPool:
+  maxTotal: 2048
+  maxIdle: 200
+  minIdle: 10
+  numTestsPerEvictionRun: 1024
+  timeBetweenEvictionRunsMillis: 30000
+  minEvictableIdleTimeMillis: -1
+  softMinEvictableIdleTimeMillis: 10000
+  maxWaitMillis: 1500
+  testOnBorrow: true
+  testWhileIdle: true
+  testOnReturn: false
+  blockWhenExhausted: false
+
+redis:
+  clusterNodes: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382,127.0.0.1:6383,127.0.0.1:6384
+  clusterTimeout: 20000
+  maxRedirects: 8
+  normalExpire: 86400
